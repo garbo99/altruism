@@ -1,0 +1,118 @@
+/**
+* Name: Joshua M. Seguerra
+* Section: Altruism
+* Year: 4th Year
+*/
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner store=new Scanner(System.in);
+		int total=0,item;
+		System.out.println("WOULD YOU LIKE TO PLACE AN ORDER?\n[1]YES    \n[2]NO");
+		System.out.print("=> ");
+		int a=store.nextInt();
+		while(a==1){
+		    System.out.println("SELECT FOR CATEGORIES BELOW:");
+		    System.out.println("[1]FOODS\n[2]SNACKS\n[3]BEVERAGES");
+		    System.out.print("=> ");
+		    int ctgry=store.nextInt();
+		    
+		    if(ctgry==1){
+		        System.out.println("WHAT KIND OF FOODS DO YOU LIKE?");
+		        //FOOD CHOICES//
+		       System.out.println("[1]Hamburger: $50");
+		       System.out.println("[2]Chicken Wings: $25");
+		       System.out.println("[3]Humba: $70");
+		       System.out.println("[4]Kangkong: $15");
+		       System.out.println("[5]Menudo: $70");
+		       
+		        System.out.println("ENTER ITEM:");
+		        item=store.nextInt();
+		        //FOOD PRICES//
+		        if (item==1){
+		            System.out.println("YOU SELECTED 1pc Hamburger");
+		            total=total+50;
+		            }else if (item==2){
+		            System.out.println("YOU SELECTED 1pc Chicken Wings");
+		            total=total+25;
+		            }else if (item==3){
+		            System.out.println("YOU SELECTED 1pc Humba");
+		            total=total+70;
+		            }else if (item==4){
+		            System.out.println("YOU SELECTED 1pc Kangkong");
+		            total=total+15;
+		            }else if (item==5){
+		            System.out.println("YOU SELECTED 1pc Menudo");
+		            total=total+70;
+		            }else{
+		                System.out.println("INVALID KEY");
+		            }
+		        
+		    }else if(ctgry==2){
+		        System.out.println("WHAT KIND OF SNACKS DO YOU LIKE?");
+		        //SNACKS CHOICES//
+		       System.out.println("[1]Burber: $30");
+		       System.out.println("[2]Waffles: $20");
+		       System.out.println("[3]Crackers: $25");
+		       System.out.println("[4]Cookies: $10");
+		       System.out.println("[5]Fishballs: $5");
+		        //SNACKS PRICES//
+		        System.out.println("ENTER ITEM:");
+		        item=store.nextInt();
+		        if (item==1){
+		            System.out.println("YOU SELECTED 1pc Burber");
+		            total=total+30;
+		            }else if (item==2){
+		            System.out.println("YOU SELECTED 1pc Waffles");
+		            total=total+20;
+		            }else if (item==3){
+		            System.out.println("YOU SELECTED 1pc Crackers");
+		            total=total+25;
+		            }else if (item==4){
+		            System.out.println("YOU SELECTED 1pc Cookies");
+		            total=total+10;
+		            }else if (item==5){
+		            System.out.println("YOU SELECTED 1pc Fishballs");
+		            total=total+5;
+		            }else{
+		                System.out.println("INVALID KEY");
+		            }
+		    }else if(ctgry==3){
+		        System.out.println("WHAT KIND OF BEVERAGES DO YOU LIKE?");
+		        //BEVERAGE CHOICES//
+		       System.out.println("[1]Emperador: $150");
+		       System.out.println("[2]BEER: $250");
+		       System.out.println("[3]Kulafu: $170");
+		       System.out.println("[4]Tanduay: $120");
+		       System.out.println("[5]GSM: $115");
+		       //BEVERAGE PRICES//
+		       System.out.println("ENTER ITEM:");
+		        item=store.nextInt();
+		        if (item==1){
+		            System.out.println("YOU SELECTED 1pc Emperador");
+		            total=total+150;
+		            }else if (item==2){
+		            System.out.println("YOU SELECTED 1pc BEER");
+		            total=total+250;
+		            }else if (item==3){
+		            System.out.println("YOU SELECTED 1pc Kulafu");
+		            total=total+170;
+		            }else if (item==4){
+		            System.out.println("YOU SELECTED 1pc Tanduay ");
+		            total=total+120;
+		            }else if (item==5){
+		            System.out.println("YOU SELECTED 1pc GSM");
+		            total=total+115;
+		            }else{
+		                System.out.println("INVALID KEY");
+		            }
+		    }else{
+		        System.out.println("INVALID KEY.");
+		    }
+		    System.out.println("DO YOU WANT TO MAKE ANOTHER PURCHASE?\n[1]YES    \n[2]NO");
+		    System.out.print("=> ");
+		    a=store.nextInt();
+		}
+		System.out.println("Total of the items you ordered: $"+total);
+	}
